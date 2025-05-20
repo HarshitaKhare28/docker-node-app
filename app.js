@@ -1,11 +1,11 @@
-const http = require('http');
+const express = require('express');
+const path = require('path');
 const PORT = process.env.PORT || 3000;
+const app = express();
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello from Dockerized Node.js App!\n');
-});
+// Serve static files from the 'public' folder
+app.use(express.static(path.join(__dirname, 'public')));
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
