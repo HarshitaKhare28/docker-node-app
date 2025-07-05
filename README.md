@@ -1,10 +1,9 @@
 # 🚀 Docker Node App
 
 A simple Node.js application running inside a Docker container. This project demonstrates how to containerize a Node.js app using Docker.
-
 ---
 
-## 📁 Project Structure
+## 📁 Project Directory
 
 ```
 docker-node-app/
